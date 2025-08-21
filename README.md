@@ -177,19 +177,31 @@ Input (Pixels)
 
     emotion-aware-mlp-mnist/
 ├─ data/                 # MNIST .gz (auto-downloaded)
+
 ├─ assets/               # checkpoints/plots (optional)
+
 ├─ emotion_mlp/
+
 │  ├─ __init__.py
+
 │  ├─ data.py            # download & load MNIST
+
 │  ├─ utils.py           # activations, loss, metrics
+
 │  ├─ model.py           # EmotionAwareMLP (gated MLP)
+
 │  └─ train.py           # training loop
+
 ├─ scripts/
+
 │  └─ run_training.py
+
 ├─ requirements.txt
+
 └─ .gitignore
 
- 6) Train the Model :
+
+ 7) Train the Model :
 
  #Option A: as a module
  python -m emotion_mlp.train
