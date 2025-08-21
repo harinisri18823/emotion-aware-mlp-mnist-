@@ -19,7 +19,7 @@ That’s exactly what we did here — we cooked up AI from scratch.
 
 ---
 
-🤔 Why another MNIST-from-scratch project?
+## 🤔 Why another MNIST-from-scratch project?
 
 You might be thinking:
 "There are already thousands of MNIST projects in Python + NumPy. Why do we need one more?"
@@ -45,6 +45,8 @@ That’s what this project brings:
 
 It’s not about just recognizing digits.
 It’s about giving AI the power to feel its own uncertainty — and learn better because of it.
+
+---
 
 ## 💡 What makes this project unique?
 Normal AI does this:  
@@ -97,24 +99,33 @@ So the **Emotional Gate** acts like a **taste test** 🍲 before making the fina
   
 ---
 
-🎭 Why call it an Emotional Gate if it’s just math?
+## 🎭 Why call it an Emotional Gate if it’s just math?
 
 Of course, this neural network doesn’t truly “feel” like a human. It’s still numbers, weights, and equations.
 So why call it an Emotional Gate?
+
 Because in humans, emotions are not just “feelings” — they are signals that guide learning:
+
 Confusion makes us slow down and try harder 😕
+
 Confidence makes us move faster 😎
+
 Curiosity makes us focus more 🔍
+
 We took that principle and encoded it mathematically:
+
 If the network feels uncertain about a digit, the Emotional Gate tells it to adjust learning.
+
 If it feels confident, it passes the decision smoothly.
+
 So the Emotional Gate is like a mathematical metaphor for emotions:
+
 Not real feelings, but a way to make the network behave a little more like us.
+
 
 ---
 
-## 🖼️ Model Flow (Simplified)  
-```text
+## 🖼️ Model Flow :  
 Input (Pixels)  
       ↓  
  [ Hidden Layer 1 ] → detects edges  
@@ -130,5 +141,97 @@ Input (Pixels)
       ↓  
  [ Output Layer ] → Final Prediction (Digit 0–9)
 
+ ---
+
+ ## Setup :
+ 
+ 1) Prerequisites
+ 
+  - Python 3.8+
+  - pip
+
+ 2) Get the code :
+
+ git clone https://github.com/<your-username>/emotion-aware-mlp-mnist.git 
+ cd emotion-aware-mlp-mnist
+
+ 3) Create a Virtual Environment :
+
+  python -m venv .venv
+  #Windows
+  .venv\Scripts\activate
+  #macOS/Linux
+  source .venv/bin/activate
+
+ 4) Install Dependencies :
+
+    pip install -r requirements.txt
+
+ 5) Project Structure :
+
+    emotion-aware-mlp-mnist/
+├─ data/                 # MNIST .gz (auto-downloaded)
+├─ assets/               # checkpoints/plots (optional)
+├─ emotion_mlp/
+│  ├─ __init__.py
+│  ├─ data.py            # download & load MNIST
+│  ├─ utils.py           # activations, loss, metrics
+│  ├─ model.py           # EmotionAwareMLP (gated MLP)
+│  └─ train.py           # training loop
+├─ scripts/
+│  └─ run_training.py
+├─ requirements.txt
+└─ .gitignore
+
+ 6) Train the Model :
+
+ #Option A: as a module
+ python -m emotion_mlp.train
+
+ #Option B: via the script
+ python scripts/run_training.py
+
+7) Configuration
+- Adjust defaults inside emotion_mlp/train.py:
+- epochs (default: 100)
+- lr (learning rate, default: 0.01)
+- batch_size (default: 64)
+- patience (early stopping, default: 8)
+- L2 coefficient in model constructor (default: 0.001)
+
+---
+
+## Results
+
+- Early stopping at epoch 72.
+- Best metrics:
+  - Train Acc: 99.83% (epoch 71)
+  - Test/Val Acc: 98.06% (epoch 71)
+  - Loss: 0.0137 (epoch 71)
+
+### Training curve (highlights)
+- 90%+ accuracy within 3 epochs.
+- 96–97% plateau by ~epoch 15.
+- Peak around 98.1% test accuracy near epoch 71.
+- Early stopping prevented overfitting after later fluctuations.
+
+> The “emotional gate” (sigmoid modulation of the last hidden layer) provides input‑dependent feature weighting, which helped push accuracy beyond the baseline plateau while maintaining generalization.
+
+This project is not about achieving the highest accuracy or building a new model from scratch.
+Instead, the main objective is:
+
+To show how an emotion-inspired mechanism (Emotional Gate) can be integrated into a machine learning model.
+
+To demonstrate that even in simple tasks (like MNIST digit classification), an emotion-like layer can improve decision-making.
+
+To provide evidence that human-inspired ideas (like confusion, hesitation, and confidence) can make artificial intelligence more adaptive.
+
+
+  
+
+    
+
+
+  
 
 
