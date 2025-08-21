@@ -1,5 +1,10 @@
 
 # 🧠 Emotion-Aware MLP on MNIST  
+
+![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
+
 * A Human-Inspired Emotion-Aware MLP for MNIST Classification. A human-like twist to learning with just Python & NumPy*  
 
 ---
