@@ -3,9 +3,6 @@
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
-![GitHub Repo stars](https://img.shields.io/github/stars/<your-username>/emotion-aware-mlp-mnist?style=social)
-![GitHub issues](https://img.shields.io/github/issues/<your-username>/emotion-aware-mlp-mnist)
-
 
 
 * A Human-Inspired Emotion-Aware MLP for MNIST Classification. A human-like twist to learning with just Python & NumPy*  
